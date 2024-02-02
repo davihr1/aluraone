@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,14 +13,22 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-          useMaterial3: true,
-        ),
-        home: Stack(alignment: AlignmentDirectional.center, children: [
-          Container(color: Colors.red, width: 300, height: 300),
-          Container(color: Colors.white, width: 100, height: 100)
-        ]));
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+      ),
+      home: const Center(
+          child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            'Hello Wold',
+            style: TextStyle(
+                color: Colors.blueAccent, decoration: TextDecoration.none),
+          ),
+        ],
+      )),
+    );
   }
 }
